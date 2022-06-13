@@ -11,8 +11,17 @@
     <ul>
         {% for p in productos %}
         <li>
-           <span>{{ p.nombre }}</span> 
+           <span id="{{ p.nombre }}">{{ p.nombre }}</span>
         </li>
+        <li>
+            <span>{{ p.nombre }}</span>
+         </li>
+         <li>
+            <span>{{ p.nombre }}</span>
+         </li>
+         <li>
+            <span>{{ p.nombre }}</span>
+         </li>
         {% endfor %}
     </ul>
 </body>

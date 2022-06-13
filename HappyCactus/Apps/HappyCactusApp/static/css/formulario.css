@@ -1,0 +1,117 @@
+.form-control.ok input {
+    border: 0.1px solid;
+    border-color: #08ffc8;
+  }
+
+  .form-control.falla input {
+    border: 0.1px solid;
+    border-color: #fe5f55;
+  }
+   
+  .enter {
+     text-align: center;
+     margin-top: -45px;
+    }
+    form-control p {
+      visibility: hidden;
+      position: absolute;
+      font-size: small;
+      font-weight: 500;
+      text-align: right;
+  }
+  
+  .form-control.falla p {
+      visibility: visible;
+      color:#e74c3c;
+  }
+  .form-control.ok p {
+    font-size: 0;
+  }
+  .registro {
+    color:rgb(25,135,84);
+  }
+  .formulariobtn {
+    border-radius: 2px;
+    color: #f6f6e9;
+    display: block;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(25,135,84);
+    border-color: rgb(25,135,84);
+    padding: 0.7em 1.7em;
+  }
+    .formulariobtn:hover {
+    background-color: #11b674a9;
+    box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  .formulariobtn:active {
+    transform: translateY(-1px);
+   }
+
+  #formulario {
+    margin-top:130px;
+    border-color: rgb(25,135,84); 
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, 
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .crearCuenta {
+    color: rgb(25,135,84);
+    display: block;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    border-color: rgb(25,135,84);
+    padding: 0.7em 1.7em;
+    
+  }
+  .crearCuenta:hover {
+    text-shadow: #ffffffa9 0px 0px 1px;
+    color: #11b674a9;
+    transform: translateY(-3px);
+  }
+
+  .crearCuenta:active {
+    transform: translateY(-1px);
+   }
+
+   .clean-block.clean-form form {
+    border-top: 2px solid #5ea4f3;
+    background-color: #fff;
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 8%);
+}
+.form-control {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.clean-block .block-heading {
+  padding-top: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}

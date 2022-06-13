@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/clima.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="icon" href= "Img/cactus.ico" />
+</head>
+
+<body style="background-image: url(Img/cactusfondo.jpg)">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+            <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav ms-auto"></ul>
+        </div>
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+            style="transform: perspective(0px);">
+                <!-- Start: Header Dark -->
+                <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar"
+                    style="height: 84px;">
+                    <div class="container"><a class="navbar-brand logo col-6 col-lg-4" href="pag_inicio.html"
+                            style="font-weight: bold;padding: 0px 0px;margin-top: -8px;"><img
+                            src="img/cactus.png" style="height:66px;">
+                                <strong>HappyCactus</strong></a><button
+                            data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span
+                                class="visually-hidden">Toggle navigation</span><span
+                                class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navcol-2">
+                            <ul class="navbar-nav ms-auto text-center" style="width:fit-content">
+                                <li class="nav-item item"><a class="nav-link" href="pag_inicio.html"
+                                        style="color: var(--bs-white); background-color: var(--bs-success);">Inicio</a>
+                                </li>
+                                <li class="nav-item item"><a class="nav-link" href="micuenta.html"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">mi
+                                        cuenta</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="catalogo.html"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">lista de
+                                        productos</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="carrito.html"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">mi
+                                        carrito</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="Pedidos.html"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">mis
+                                        pedidos</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="login.html"
+                                        style="color: var(--bs-white); background-color: var(--bs-success);">cerrar
+                                        sesion</a></li>
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </nav><!-- End: Header Dark -->
+                <div class="collapse navbar-collapse" id="navcol-3">
+                    <ul class="navbar-nav ms-auto"></ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</nav> 
+<br>
+<br>
+<br>
+    <main class="page login-page">
+        <section class="clean-block clean-form dark" style="background-color: transparent;">
+            <form id="formulario">
+                <div class="block-heading">
+                    <h3 style="color: rgb(25,135,84);font-family: ABeeZee, sans-serif;">Registrar nuevo producto</h3>
+                </div>
+                <div class="mb-3" style="border: 0px; margin-top: 50px;">
+                    <label class="form-label" for="Nombre">Nombre del producto:</label>
+                    <input class="form-control" type="text" id="Nombre" placeholder="Nombre del producto">
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="tipoProducto">Tipo de producto</label>
+                    <select class="form-control" id="tipoProducto">            
+                        <option value="0">Seleccione tipo de producto</option>
+                        <option value="1">Fertilizante</option>
+                        <option value="2">Maceteros</option>
+                        <option value="3">Tierra</option>
+                        <option value="4">Gusanos</option>
+                        <option value="5">Plantas</option>
+                    </select>
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="descripcion">Descripción del producto:</label>
+                    <input class="form-control" type="text" id="descripcion" placeholder="Ingrese descripción">
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="Temperatura">Temperatura ideal promedio:</label>
+                    <input class="form-control" type="text" id="Temperatura" placeholder="Ingrese temperatura en Celcius">
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="tipoPlanta">Tipo de planta</label>
+                    <select class="form-control" id="tipoPlanta">
+                        <option value="0">Seleccione tipo de planta</option>
+                        <option value="1">Indoor</option>
+                        <option value="2">Outdoor</option>
+                        <option value="3">Hibrida</option>
+                    </select>
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="tipoplanta">Precio del producto:</label>
+                    <input class="form-control" type="text" id="precio" placeholder="Ingrese precio en pesos">
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="stock">Stock del producto:</label>
+                    <input class="form-control" type="text" id="stock" placeholder="Ingrese stock">
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="imagen">Imagen del producto:</label>
+                    <input class="form-control" type="file" id="imagen" placeholder="Ingrese imagen">
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="fecha">Fecha de ingreso producto</label>
+                    <input class="form-control" type="date" id="fecha" placeholder="Ingrese fecha de ingreso">
+                    <p></p>
+                </div>
+                <button class="formulariobtn" type="submit">Generar solicitud</button>
+            </form>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <!-- Start: Footer Dark -->
+        <footer class="footer-dark">
+            <div class="container">
+                <div class="row">
+                    <!-- Start: Services -->
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="#">Venta Web</a></li>
+                            <li><a href="#">Contactos</a></li>
+                            <li><a href="#">Comentarios</a></li>
+                        </ul>
+                    </div><!-- End: Services -->
+                    <!-- Start: About -->
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Nosotros</h3>
+                        <ul>
+                            <li><a href="#">HappyCactus</a></li>
+                            <li><a href="#">Integrantes</a></li>
+                            <li><a href="#">Trayectoria</a></li>
+                        </ul>
+                    </div><!-- End: About -->
+                    <!-- Start: Footer Text -->
+                    <div class="col-md-6 item text">
+                        <h3>HappyCactus</h3>
+                        <p>Fundacion sin fines de lucro orientada a la venta de articulos de jardin y hogar.</p>
+                    </div><!-- End: Footer Text -->
+                </div><!-- Start: Copyright -->
+                <p class="copyright">HappyCactus © 2022</p><!-- End: Copyright -->
+            </div>
+    </footer><!-- End: Footer Dark -->
+        
+    <script src="js/registroProducto.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/vanilla-zoom.js"></script>
+</body>
+
+</html>

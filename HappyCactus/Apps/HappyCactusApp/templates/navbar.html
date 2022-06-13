@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>Document</title>
+</head>
+    <link rel="stylesheet" href='{% static "bootstrap/css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/styles.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/vanilla-zoom.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/formulario.css" %}'>
+    <link rel="stylesheet" href='{% static "css/clima.css" %}'>
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+            <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav ms-auto"></ul>
+        </div>
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+            style="transform: perspective(0px);">
+                <!-- Start: Header Dark -->
+                <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar"
+                    style="height: 84px;">
+                    <div class="container"><a class="navbar-brand logo col-6 col-lg-4" href="{% url 'inicio' %}"
+                            style="font-weight: bold;padding: 0px 0px;margin-top: -8px;"><img
+                                src='{% static "img/cactus.png" %}' style="height:66px;">
+                                <strong>HappyCactus</strong></a><button
+                            data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span
+                                class="visually-hidden">Toggle navigation</span><span
+                                class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navcol-2">
+                            <ul class="navbar-nav ms-auto text-center" style="width:fit-content">
+                                <li class="nav-item item"><a class="nav-link" href="{% url 'inicio' %}"
+                                        style="color: var(--bs-white); background-color: var(--bs-success);">Inicio</a>
+                                </li>
+                                <li class="nav-item item"><a class="nav-link" href="{% url 'mantenimiento' %}"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">mi
+                                        cuenta</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="{% url 'catalogo' %}"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">lista de
+                                        productos</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="{% url 'carrito' %}"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">mi
+                                        carrito</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="{% url 'pedidos' %}"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">mis
+                                        pedidos</a></li>
+                                <li class="nav-item item"><a class="nav-link" href="{% url 'inicio' %}"
+                                        style="color: var(--bs-white); background-color: var(--bs-success);">cerrar
+                                        sesion</a></li>
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </nav><!-- End: Header Dark -->
+                <div class="collapse navbar-collapse" id="navcol-3">
+                    <ul class="navbar-nav ms-auto"></ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</nav> 
+<br>
+<br>
+<br>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

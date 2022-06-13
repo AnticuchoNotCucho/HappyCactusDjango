@@ -4,3 +4,10 @@ from .models import Producto
 def index(request):
     productos = Producto.objects.all()
     return render(request, 'index.html', {'productos': productos})
+
+def registro(request):
+    return render(request, 'registroproducto.html')
+
+def catalogo(request):
+    productos = Producto.objects.all()
+    return render(request, 'catalogo.html', {'productos': productos})

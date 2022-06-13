@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Catalogo - HappyCactus</title>
+    <link rel="icon" href="img/favico.ico" />
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vanilla-zoom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/clima.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
+    <link rel="stylesheet" href="{% static 'img/cactus.ico' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+            <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav ms-auto"></ul>
+        </div>
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+            style="transform: perspective(0px);">
+            <!-- Start: Header Dark -->
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="height: 84px;">
+                <div class="container"><a class="navbar-brand logo col-6 col-lg-4" href="pag_inicio.html"
+                        style="font-weight: bold;padding: 0px 0px;margin-top: -8px;"><img src="img/cactus.png"
+                            style="height:66px;">
+                        <strong>HappyCactus</strong></a><button data-bs-toggle="collapse" class="navbar-toggler"
+                        data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-2">
+                        <ul class="navbar-nav ms-auto text-center" style="width:fit-content">
+                            <li class="nav-item item"><a class="nav-link" href="pag_inicio.html"
+                                    style="color: var(--bs-white); background-color: var(--bs-success);">Inicio</a>
+                            </li>
+                            <li class="nav-item item"><a class="nav-link" href="micuenta.html"
+                                    style="color: var(--bs-white); background-color: var(--bs-success)">mi
+                                    cuenta</a></li>
+                            <li class="nav-item item"><a class="nav-link" href="catalogo.html"
+                                    style="color: var(--bs-white); background-color: var(--bs-success)">lista de
+                                    productos</a></li>
+                            <li class="nav-item item"><a class="nav-link" href="carrito.html"
+                                    style="color: var(--bs-white); background-color: var(--bs-success)">mi
+                                    carrito</a></li>
+                            <li class="nav-item item"><a class="nav-link" href="Pedidos.html"
+                                    style="color: var(--bs-white); background-color: var(--bs-success)">mis
+                                    pedidos</a></li>
+                            <li class="nav-item item"><a class="nav-link" href="login.html"
+                                    style="color: var(--bs-white); background-color: var(--bs-success);">cerrar
+                                    sesion</a></li>
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+            </nav><!-- End: Header Dark -->
+            <div class="collapse navbar-collapse" id="navcol-3">
+                <ul class="navbar-nav ms-auto"></ul>
+            </div>
+            </div>
+        </nav>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <main class="page catalog-page">
+        <section class="clean-block clean-catalog dark">
+            <div class="container">
+                <div class="block-heading">
+                    <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="w-100 d-block"
+                                    src="{% static 'Img/desc.png' %}" alt="Slide Image">
+                            </div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="{% static 'Img/pronto.png' %}"
+                                    alt="Slide Image">
+                            </div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="{% static 'Img/desc.png' %}"
+                                    alt="Slide Image">
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Start: Previous --><a class="carousel-control-prev" href="#carousel-1" role="button"
+                                data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span
+                                    class="visually-hidden">Previous</span></a><!-- End: Previous -->
+                            <!-- Start: Next --><a class="carousel-control-next" href="#carousel-1" role="button"
+                                data-bs-slide="next"><span class="carousel-control-next-icon"></span><span
+                                    class="visually-hidden">Next</span></a><!-- End: Next -->
+                        </div>
+                        <ol class="carousel-indicators" style="height: 0px;">
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="d-none d-md-block">
+                                <div class="filters" id="filters">
+                                    <div class="filter-item" id="filtroImp">
+                                        <h3>Implementos</h3>
+                                        <div class="form-check"><input class="form-check-input" type="radio"
+                                                name="Implementos" id="formCheck-1">
+                                            <label class="form-check-label" for="formCheck-1">Fertilizante</label>
+                                        </div>
+                                        <div class="form-check"><input class="form-check-input" type="radio"
+                                                name="Implementos" id="formCheck-2">
+                                            <label class="form-check-label" for="formCheck-2">Macetero</label>
+                                        </div>
+                                        <div class="form-check"><input class="form-check-input" type="radio"
+                                                name="Implementos" id="formCheck-3">
+                                            <label class="form-check-label" for="formCheck-3">Tierra&nbsp;</label>
+                                        </div>
+                                        <div class="form-check"><input class="form-check-input" type="radio"
+                                                name="Implementos" id="formCheck-4">
+                                            <label class="form-check-label" for="formCheck-4">Gusanos</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-item" id="filtroPlanta">
+                                        <h3>Tipos de plantas</h3>
+                                        <div class="form-check"><input class="form-check-input" type="radio"
+                                                name="Tipos" id="formCheck-5"><label class="form-check-label"
+                                                for="formCheck-5">Indoor</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="radio"
+                                                name="Tipos" id="formCheck-6"><label class="form-check-label"
+                                                for="formCheck-6">Outdoor</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="radio"
+                                                name="Tipos" id="formCheck-7"><label class="form-check-label"
+                                                for="formCheck-7">Mixto</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-md-none"><a class="btn btn-link d-md-none filter-collapse"
+                                    data-bs-toggle="collapse" aria-expanded="true" aria-controls="filters"
+                                    href="#filters" role="button" style="color: #9b673c;">Filtros<i
+                                        class="icon-arrow-down filter-caret"></i></a>
+                                <div class="collapse show" id="filters">
+                                    <div class="filters">
+                                        <div class="filter-item" id="filtroImpCollapse">
+                                            <h3>Implementos</h3>
+                                            <div class="form-check"><input class="form-check-input" type="radio"
+                                                    name="Tipos" id="formCheck-11"><label class="form-check-label"
+                                                    for="formCheck-1">Fertilizante</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio"
+                                                    name="Tipos" id="formCheck-22"><label class="form-check-label"
+                                                    for="formCheck-2">Macetero</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio"
+                                                    name="Tipos" id="formCheck-33"><label class="form-check-label"
+                                                    for="formCheck-3">Tierra&nbsp;</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio"
+                                                    name="Tipos" id="formCheck-44"><label class="form-check-label"
+                                                    for="formCheck-4">Gusanos</label></div>
+                                        </div>
+                                        <div class="filter-item" id="filtroPlantaCollapse">
+                                            <h3>Tipos de plantas</h3>
+                                            <div class="form-check"><input class="form-check-input" type="radio"
+                                                    name="Tipos" id="formCheck-55"><label class="form-check-label"
+                                                    for="formCheck-5">Indoor</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio"
+                                                    name="Tipos" id="formCheck-66"><label class="form-check-label"
+                                                    for="formCheck-6">Outdoor</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio"
+                                                    name="Tipos" id="formCheck-77"><label class="form-check-label"
+                                                    for="formCheck-7">Mixto</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="products">
+                                <div class="row g-0" id="productos">
+                                    {% for p in productos %}
+                                    <div class="col-12 col-md-6 col-lg-4" id="{{ p.id }}">
+                                        <div class="clean-product-item">
+                                            <img class="img-fluid d-block mx-auto" src="{{ p.imagen }}">
+                                            <div class="image"><a href="#"></a></div>
+                                            <div class="product-name"><a href="{{ p.link }}"
+                                                    style="color:var(--bs-success);font-size: large"> {{ p.nombre }}</a>
+                                                </div>
+                                            <div>
+                                                <div class="product-specs">
+                                                    <div class="text-left">
+                                                        <h6>Tipo de producto:<p class="tipoProducto">{{ p.tipoPlanta }}
+                                                            </p>
+                                                        </h6>
+                                                        <h6>Tipo de ambiente:<p class="tipoPlanta">{{ p.tipoAmbiente }}
+                                                            </p>
+                                                        </h6>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-xl-flex align-items-xl-start about">
+                                                <div class="d-inline flex-row rating">
+                                                    <img src="img/star.svg">
+                                                    <img src="img/star.svg">
+                                                    <img src="img/star.svg">
+                                                    <img src="img/star-half-empty.svg">
+                                                    <img src="img/star-half-empty.svg">
+                                                    <h4 style="color: rgb(50,48,60);font-weight: bold;width: 100px;">
+                                                        {{p.precio}}</h4><button
+                                                        class="btn btn-primary text-center d-flex d-xxl-flex align-items-center align-items-xxl-center"
+                                                        type="button"
+                                                        style="background: var(--bs-white);border-color: #9b673c;color: #9b673c;font-size: 16px;width: 173.656px;"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                                            class="icon icon-tabler icon-tabler-plant"
+                                                            style="height: 16px;margin: -2px;">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M7 15h10v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2v-4z">
+                                                            </path>
+                                                            <path d="M12 9a6 6 0 0 0 -6 -6h-3v2a6 6 0 0 0 6 6h3"></path>
+                                                            <path d="M12 11a6 6 0 0 1 6 -6h3v1a6 6 0 0 1 -6 6h-3">
+                                                            </path>
+                                                            <line x1="12" y1="15" x2="12" y2="9"></line>
+                                                        </svg>&nbsp;Añadir al carrito&nbsp;</button>
+                                                </div>
+                                                <div class="price"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <nav class="fw-bold">
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><a class="page-link" href="#"
+                                            aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span
+                                                aria-hidden="true">»</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- Start: Footer Dark -->
+    <footer class="page-footer dark">
+        <!-- Start: Footer Dark -->
+        <footer class="footer-dark">
+            <div class="container">
+                <div class="row">
+                    <!-- Start: Services -->
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="#">Venta Web</a></li>
+                            <li><a href="#">Contactos</a></li>
+                            <li><a href="#">Comentarios</a></li>
+                        </ul>
+                    </div><!-- End: Services -->
+                    <!-- Start: About -->
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Nosotros</h3>
+                        <ul>
+                            <li><a href="#">HappyCactus</a></li>
+                            <li><a href="#">Integrantes</a></li>
+                            <li><a href="#">Trayectoria</a></li>
+                        </ul>
+                    </div><!-- End: About -->
+                    <!-- Start: Footer Text -->
+                    <div class="col-md-6 item text">
+                        <h3>HappyCactus</h3>
+                        <p>Fundacion sin fines de lucro orientada a la venta de articulos de jardin y hogar.</p>
+                    </div><!-- End: Footer Text -->
+                </div><!-- Start: Copyright -->
+                <p class="copyright">HappyCactus © 2022</p><!-- End: Copyright -->
+            </div>
+        </footer><!-- End: Footer Dark -->
+
+</body>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/script.min.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+<script src="{% static 'js/filtroProducto.js' %}"></script>
+
+</html>
