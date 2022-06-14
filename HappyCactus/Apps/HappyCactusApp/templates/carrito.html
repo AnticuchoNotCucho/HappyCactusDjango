@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Carrito de compras</title>
+    <link rel="icon" href="img/favico.ico" />
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vanilla-zoom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/clima.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
+    <link rel="stylesheet" href="{% static 'img/cactus.ico' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <main class="page shopping-cart-page">
+        <section class="clean-block clean-cart dark" style="background: var(--bs-white);">
+            <div class="container">
+                <div class="block-heading">
+                    <h1>Carrito de compra&nbsp;<i class="fa fa-shopping-cart"></i></h1>
+                    <p>Seleccione la cantidad de productos que desea llevar</p>
+                </div>
+                <div class="content">
+                    <div class="row g-0">
+                        <div class="col-md-12 col-lg-8">
+                            <div class="items">
+                                <div class="product">
+                                    <div class="row justify-content-center align-items-center" id="planta1">
+                                        <div class="col-md-3">
+                                            <div class="product-image"><img class="img-fluid d-block mx-auto image"
+                                                src="img/planta1.jpg"></div>
+                                        </div>
+                                        <div class="col-md-5 product-info"><a class="product-name" href="#">Plantita con
+                                                macetero</a>
+                                            <div class="product-specs">
+                                                <div>
+                                                    <p style="font-weight: bold;">Codigo Producto:&nbsp;&nbsp;<span
+                                                            class="value">2000383579665</span><br><strong>Tipo de
+                                                            Planta:&nbsp;&nbsp;</strong><span
+                                                            class="value">Indoor</span><br></p>
+                                                    <p style="font-weight: bold;">Codigo Producto:&nbsp;&nbsp;<span
+                                                            class="value">2000383579665</span><br><strong>Tipo de
+                                                            Planta:&nbsp;&nbsp;</strong><span
+                                                            class="value">Indoor</span><br></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2 quantity"><label class="form-label d-none d-md-block"
+                                                for="quantity" style="font-weight: bold;">Cantidad</label><input
+                                                type="number" id="number" class="form-control quantity-input" value="1"
+                                                min="1" max="99"><button class="btn btn-primary" type="button"
+                                                style="width: 68px;margin-top: 10px;background: rgb(155,103,60);font-weight: bold;font-size: 14.4px;border-style: none;border-color: var(--bs-purple);box-shadow: 0px 0px 4px 0px var(--bs-gray-900);" id="boton1">Quitar</button>
+                                        </div>
+                                        <div class="col-6 col-md-2 price"><span>$</span><span
+                                                style="font-family: 'Azeret Mono', monospace;"id="precio">5990</span></div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="row justify-content-center align-items-center" id="planta2">
+                                        <div class="col-md-3">
+                                            <div class="product-image"><img class="img-fluid d-block mx-auto image"
+                                                src="img/planta2.png"></div>
+                                        </div>
+                                        <div class="col-md-5 product-info"><a class="product-name" href="#">Cactus con
+                                                macetero</a>
+                                            <div class="product-specs">
+                                                <div>
+                                                    <p style="font-weight: bold;">Codigo Producto:&nbsp;&nbsp;<span
+                                                            class="value">2000383579665</span><br><strong>Tipo de
+                                                            Planta:&nbsp;&nbsp;</strong><span
+                                                            class="value">Indoor</span><br></p>
+                                                    <p style="font-weight: bold;">Codigo Producto:&nbsp;&nbsp;<span
+                                                            class="value">2000383579665</span><br><strong>Tipo de
+                                                            Planta:&nbsp;&nbsp;</strong><span
+                                                            class="value">Indoor</span><br></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2 quantity"><label class="form-label d-none d-md-block"
+                                                for="quantity" style="font-weight: bold;">Cantidad</label><input
+                                                type="number" id="number2" class="form-control quantity-input" value="1"
+                                                min="1" max="99"><button class="btn btn-primary" type="button"
+                                                style="width: 68px;margin-top: 10px;background: rgb(155,103,60);font-weight: bold;font-size: 14.4px;border-style: none;box-shadow: 0px 0px 4px 0px var(--bs-gray-900);" id="boton2">Quitar</button>
+                                        </div>
+                                        <div class="col-6 col-md-2 price"><span
+                                                style="font-family: 'Azeret Mono', monospace;" id="precio1">$4990</span></div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="row justify-content-center align-items-center" id="planta3">
+                                        <div class="col-md-3">
+                                            <div class="product-image"><img class="img-fluid d-block mx-auto image"
+                                                src="img/planta3.jpg"></div>
+                                        </div>
+                                        <div class="col-md-5 product-info"><a class="product-name" href="#">Plantita con
+                                                macetero mini</a>
+                                            <div class="product-specs">
+                                                <div>
+                                                    <p style="font-weight: bold;">Codigo Producto:&nbsp;&nbsp;<span
+                                                            class="value">2000383579665</span><br><strong>Tipo de
+                                                            Planta:&nbsp;&nbsp;</strong><span
+                                                            class="value">Indoor</span><br></p>
+                                                    <p style="font-weight: bold;">Codigo Producto:&nbsp;&nbsp;<span
+                                                            class="value">2000383579665</span><br><strong>Tipo de
+                                                            Planta:&nbsp;&nbsp;</strong><span
+                                                            class="value">Indoor</span><br></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2 quantity"><label class="form-label d-none d-md-block"
+                                                for="quantity" style="font-weight: bold;">Cantidad</label><input
+                                                type="number" id="number3" class="form-control quantity-input" value="1"
+                                                min="1" max="99"><button class="btn btn-primary" type="button"
+                                                style="width: 68px;margin-top: 10px;background: rgb(155,103,60);font-weight: bold;font-size: 14.4px;border-style: none;box-shadow: 0px 0px 4px 0px var(--bs-gray-900);" id="boton3" >Quitar</button>
+                                        </div>
+                                        <div class="col-6 col-md-2 price"><span
+                                                style="font-family: 'Azeret Mono', monospace;" id="precio2">$3990</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-4">
+                            <div class="summary" style="background: rgb(243,255,244);">
+                                <h3 style="color: #9b673c;">MONTO A PAGAR</h3>
+                                <h4 style="background: rgb(243,255,244);border-style: none;"><span
+                                        class="text">Subtotal</span><span class="price">$0</span></h4>
+                                <h4 style="background: rgb(243,255,244);"><span class="text">Descuento</span><span
+                                        class="price">$0</span></h4>
+                                <h4 style="background: rgb(243,255,244);"><span class="text"
+                                        style="color: rgb(33, 37, 41);">Envio</span><span class="price">$2500</span></h4>
+                                <h4 style="background: rgb(243,255,244);"><span class="text"
+                                        style="color: rgb(33,37,41);">Total</span><span class="price"
+                                        style="color: rgb(33,37,41);font-weight: bold;" id="total">$0</span></h4>
+                                <div class="input-group"><input class="border rounded-0 form-control" type="text"
+                                        style="height: 47px;margin-top: 20px;min-width: 0;--bs-light-rgb: 41,232,37;"
+                                        placeholder="Ingrese Codigo"><button
+                                        class="btn btn-success btn-sm fs-6 fw-bold border rounded-0 d-xl-flex justify-content-xl-start"
+                                        type="button"
+                                        style="text-align: left;width: 150.406px;height: 47px;background: #9b673c;">&nbsp;
+                                        Ingresar Cupon&nbsp;&nbsp;</button></div><button
+                                    class="btn btn-primary btn-lg d-block w-100" type="button"
+                                    style="background: var(--bs-green);border-style: none;box-shadow: 0px 0px 3px 0px var(--bs-gray-900);">Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- Start: Footer Dark -->
+    {% include 'footer.html' %}
+        
+ <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/script.min.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+<script src="{% static 'js/carrito.js' %}"></script>
+</body>
+
+</html>

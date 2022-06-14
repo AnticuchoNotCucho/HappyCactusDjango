@@ -31,7 +31,7 @@ def registrarProducto(request):
         precio = request.POST['precio']
         stock = request.POST['stock']
         producto = Producto.objects.create(nombre=nombre, precio=precio, stock=stock,tipoAmbiente=tipoAmbiente, tipoPlanta=tipoPlanta, fecha=fecha, temperatura=temperatura)
-        return redirect('/catalogo')
+        return redirect('/')
 
 def eliminarProducto(request, id):
     producto = Producto.objects.get(id=id)
@@ -61,4 +61,16 @@ def editarProducto(request):
         producto.fecha = fecha
         producto.temperatura = temperatura
         producto.save()
-        return redirect('/catalogo')
+        return redirect('/')
+
+def micuenta(request):
+    return render(request, 'micuenta.html')
+
+def carrito(request):
+    return render(request, 'carrito.html')
+
+def registration(request):
+    return render(request, 'registration.html')
+
+def pag_inicio(request):
+    return render(request, 'pag_inicio.html')
