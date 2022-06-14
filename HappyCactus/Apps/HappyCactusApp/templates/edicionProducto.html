@@ -21,18 +21,23 @@
     {% include 'navbar.html' %}
     <main class="page login-page">
         <section class="clean-block clean-form dark" style="background-color: transparent;">
-            <form action="/registrarProducto/" id="formulario" method="post"> {% csrf_token %}
+            <form action="/editarProducto/" id="formulario" method="post"> {% csrf_token %}
                 <div class="block-heading">
-                    <h3 style="color: rgb(25,135,84);font-family: ABeeZee, sans-serif;">Registrar nuevo producto</h3>
+                    <h3 style="color: rgb(25,135,84);font-family: ABeeZee, sans-serif;">Editar datos del producto</h3>
                 </div>
                 <div class="mb-3" style="border: 0px; margin-top: 50px;">
                     <label class="form-label" for="Nombre">Nombre del producto:</label>
-                    <input class="form-control" type="text" id="Nombre" placeholder="Nombre del producto" name="nombre">
+                    <input class="form-control" type="text" id="Nombre" value="{{producto.nombre}}" placeholder="Nombre del producto" name="nombre">
+                    <p></p>
+                </div>
+                <div class="mb-3" style="border: 0px; margin-top: 50px;">
+                    <label class="form-label" for="Nombre">Codigo:</label>
+                    <input class="form-control" type="text" id="Nombre" value="{{producto.id}}" placeholder="Codigo" name="id" readonly>
                     <p></p>
                 </div>
                 <div class="mb-3 " style="border: 0px;">
                     <label class="form-label" for="tipoProducto">Tipo de producto</label>
-                    <select class="form-control" id="tipoProducto" name="tipoProducto">            
+                    <select class="form-control" id="tipoProducto" name="tipoProducto" value="{{producto.tipoProducto}}">            
                         <option value="0">Seleccione tipo de producto</option>
                         <option value="1">Fertilizante</option>
                         <option value="2">Maceteros</option>
@@ -44,17 +49,17 @@
                 </div>
                 <div class="mb-3 " style="border: 0px;">
                     <label class="form-label" for="descripcion">Descripción del producto:</label>
-                    <input class="form-control" type="text" id="descripcion" placeholder="Ingrese descripción" name="descripcion">
+                    <input class="form-control" type="text" id="descripcion" placeholder="Ingrese descripción" name="descripcion" value="{{producto.descripcion}}">
                     <p></p>
                 </div>
                 <div class="mb-3 " style="border: 0px;">
                     <label class="form-label" for="Temperatura">Temperatura ideal promedio:</label>
-                    <input class="form-control" type="text" id="Temperatura" placeholder="Ingrese temperatura en Celcius" name="temperatura">
+                    <input class="form-control" type="text" id="Temperatura" placeholder="Ingrese temperatura en Celcius" name="temperatura" value="{{producto.temperatura}}">
                     <p></p>
                 </div>
                 <div class="mb-3 " style="border: 0px;">
                     <label class="form-label" for="tipoPlanta">Tipo de planta</label>
-                    <select class="form-control" id="tipoPlanta" name="tipoPlanta">
+                    <select class="form-control" id="tipoPlanta" name="tipoPlanta" value="{{producto.tipoPlanta}}">
                         <option value="0">Seleccione tipo de planta</option>
                         <option value="1">Indoor</option>
                         <option value="2">Outdoor</option>
@@ -64,20 +69,20 @@
                 </div>
                 <div class="mb-3 " style="border: 0px;">
                     <label class="form-label" for="tipoplanta">Precio del producto:</label>
-                    <input class="form-control" type="text" id="precio" placeholder="Ingrese precio en pesos" name="precio">
+                    <input class="form-control" type="text" id="precio" placeholder="Ingrese precio en pesos" name="precio" value="{{producto.precio}}">
                     <p></p>
                 </div>
                 <div class="mb-3 " style="border: 0px;">
                     <label class="form-label" for="stock">Stock del producto:</label>
-                    <input class="form-control" type="text" id="stock" placeholder="Ingrese stock" name="stock">
+                    <input class="form-control" type="text" id="stock" placeholder="Ingrese stock" name="stock" value="{{producto.stock}}">
                     <p></p>
                 </div>
                 <div class="mb-3 " style="border: 0px;">
                     <label class="form-label" for="fecha">Fecha de ingreso producto</label>
-                    <input class="form-control" type="date" id="fecha" placeholder="Ingrese fecha de ingreso" name="fecha">
+                    <input class="form-control" type="date" id="fecha" placeholder="Ingrese fecha de ingreso" name="fecha" value="{{producto.fecha}}">
                     <p></p>
                 </div>
-                <button class="formulariobtn" type="submit">Generar Ingreso</button>
+                <button class="formulariobtn" type="submit">Actualizar producto</button>
             </form>
         </section>
     </main>

@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>Que pasa larvaaaaa</h1>
+<body style="background-image: url( '/static/Img/cactusfondo.jpg');">
+    {% include 'navbar.html' %}
+    <br>
+    <h1 style="background-color: white; width: 50rem; margin-left: 30px;">Lista de productos en el sistema</h1>
     <ul>
         {% for p in productos %}
         <li>
-           <span id="{{ p.nombre }}">{{ p.nombre }}</span>
+           <div class="card" style="width: 50rem;">
+            <div class="card-body" style="text-align: center;">
+              <p class="card-text"><h6 id="{{ p.nombre }}"><h4>{{ p.nombre }}</h4></p>
+              <span id="{{ p.stock }}">Stock disponible: {{ p.stock }}</span>
+              <br>
+              <span id="{{ p.precio }}">Precio: {{ p.precio }}</span>
+              <a href="edicionProducto/{{ p.id }}" class="formulariobtn btn" style="width: 200px; height: 50px;">Editar</a>
+              <a href="eliminarProducto/{{ p.id }}" class="formulariobtn btn" style="width: 200px; height: 50px; background-color: #9b673c;">Eliminar</a>
+
+            </div>
+          </div>
+           
         </li>
-        <li>
-            <span>{{ p.nombre }}</span>
-         </li>
-         <li>
-            <span>{{ p.nombre }}</span>
-         </li>
-         <li>
-            <span>{{ p.nombre }}</span>
-         </li>
         {% endfor %}
     </ul>
 </body>

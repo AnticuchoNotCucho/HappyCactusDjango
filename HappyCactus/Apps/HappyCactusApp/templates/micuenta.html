@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Inicio</title>
+        <link rel="icon" href='{% static "img/favico.ico" %}' />
+        <link rel="stylesheet" href="css/clima.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/vanilla-zoom.min.css">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <link rel="icon" href="Img/cactus.ico" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </head>
+    
+    <body>
+        {% include 'navbar.html' %}
+    <section class="ms-hero-page ms-hero-img-city ms-hero-bg-primary">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">
+                    <span> </span>
+                </h1>
+                <p class="lead lead-lg color-white text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">
+                    <span class="color-warning">Bienvenido</span> a tu cuenta
+                    <span class="color-warning" id="nombre"></span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-hero card-primary animated fadeInUp animation-delay-7">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <div class="avatar-xxl center-block">
+                                <img src="img/cactus.png" alt="..." class="img-circle img-thumbnail img-fluid">
+                            </div>
+                            <h2 class="color-primary no-m mt-3">
+                                
+                            </h2>
+                            <p class="lead">
+                            <span class="color-warning">
+    Para agregar nuevos productos al stock, ingrese al formulario.
+    <div>
+    <button type="button" class="btn" onclick="location.href='registroproducto.html'" style="background-color: var(--bs-success); color: rgb(255, 255, 255);">
+        Ingresar Productos.
+    </div>
+    {% include 'footer.html' %}
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/usuario.js"></script>
+</body>
+    
+</html>

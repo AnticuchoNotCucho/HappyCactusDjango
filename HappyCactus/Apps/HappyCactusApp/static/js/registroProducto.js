@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
     const precio = document.getElementById('precio')
     const cantidad = document.getElementById('stock')
     const descripcion = document.getElementById('descripcion')
-    const imagen = document.getElementById('imagen')
     const tipoProducto = document.getElementById('tipoProducto')
     const tipoPlanta = document.getElementById('tipoPlanta')
     const fecha = document.getElementById('fecha')
@@ -22,20 +21,19 @@ window.addEventListener('load', () => {
         }
     })
     
-    imagen.addEventListener('change', (e) => {
-        if (e.target.files[0].size > 2000000) {
-            alert('La imagen debe ser menor a 2MB')
-            e.target.value = ''
-        }
-        else if(e.target.files[0].type !== 'image/jpeg' && e.target.files[0].type !== 'image/png'){
-            alert('La imagen debe ser una imagen jpeg o png')
-            e.target.value = ''
-        }
-    })
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         validaCampos()
+        if (validaCampos()) {
+            console.log('formulario enviado')
+            form.submit();
+        }
+        else {
+            console.log(validaCampos())
+            console.log('formulario no enviado')
+        }
+           
     })
     const validaCampos = () => {
         const nombreValor = nombre.value.trim()
@@ -85,12 +83,6 @@ window.addEventListener('load', () => {
         validaOk(descripcion)
     }
 
-    if (!imagen.value) {
-        validaFalla(imagen, 'Debe ingresar imagen')
-    }
-    else {
-        validaOk(imagen)
-    }
     if (tipoProducto.value === "0") {
         validaFalla(tipoProducto, 'Debe seleccionar un tipo de producto')
     }
@@ -125,6 +117,13 @@ window.addEventListener('load', () => {
         validaOk(temperatura)
     }
 
+    if (nombreValor && descripcionValor && fechaIngresada.getTime() <= fecha_Actual.getTime() && !isNaN(precio.value) && !isNaN(cantidad.value) && !isNaN(temperaturaValor)) {
+        return true
+    }
+    else {
+        return false
+    }
+
 }
     const validaFalla = (input, mensaje) => {
         const formControl = input.parentElement
@@ -138,14 +137,3 @@ window.addEventListener('load', () => {
     }
 
 })
-
-
-//    const validaTipo = () => {
-//    const tipoProducto = document.getElementById('tipoProducto')
-//    if (tipoProducto.value === "5") {
-//        document.getElementById('tipoPlanta').style.display = 'block'
-//    }
- //   else {
- //       document.getElementById('tipoPlanta').style.display = 'none'
- //   }
-//}

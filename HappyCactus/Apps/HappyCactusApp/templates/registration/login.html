@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login - Brand</title>
+    <link rel="stylesheet" href="{% static 'img/cactus.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/clima.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vanilla-zoom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+</head>
+<body style="background-image: url( '/static/Img/cactusfondo.jpg');">
+    {% include 'navbar.html' %}
+    <main class="page login-page">
+        <section class="clean-block clean-form dark" style="background-color: transparent;">
+            <form id="formulario" method="post">
+                {% csrf_token %}
+                <div class="block-heading">
+                    <h1 style="color: rgb(25,135,84);font-family: ABeeZee, sans-serif;">Iniciar sesión</h1>
+                </div>
+                <div class="mb-3" style="border: 0px; margin-top: 50px;">
+                    <label class="form-label" for="iniciousuario">Usuario</label>
+                    <input class="form-control item" type="text" id="iniciousuario"
+                        placeholder="Nombre de usuario o email" name="username">
+                    <p></p>
+                </div>
+                <div class="mb-3 " style="border: 0px;">
+                    <label class="form-label" for="iniciopass">Contraseña</label>
+                    <input class="form-control" type="password" id="iniciopass" placeholder="**********" autocomplete="off" name="password">
+                    <p></p>
+                </div>
+                <button class="formulariobtn" type="submit">Iniciar sesión</button>
+                <button class="crearCuenta" type="button" onclick="window.location.href='registration.html'">Crear cuenta</button>
+            </form>
+        </section>
+    </main>
+    {% include 'footer.html' %}
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
+
+</html>

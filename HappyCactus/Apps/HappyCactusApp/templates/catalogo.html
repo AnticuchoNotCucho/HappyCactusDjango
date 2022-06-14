@@ -18,57 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
-            <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="navbar-nav ms-auto"></ul>
-        </div>
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
-            style="transform: perspective(0px);">
-            <!-- Start: Header Dark -->
-            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" style="height: 84px;">
-                <div class="container"><a class="navbar-brand logo col-6 col-lg-4" href="pag_inicio.html"
-                        style="font-weight: bold;padding: 0px 0px;margin-top: -8px;"><img src="img/cactus.png"
-                            style="height:66px;">
-                        <strong>HappyCactus</strong></a><button data-bs-toggle="collapse" class="navbar-toggler"
-                        data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span
-                            class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navcol-2">
-                        <ul class="navbar-nav ms-auto text-center" style="width:fit-content">
-                            <li class="nav-item item"><a class="nav-link" href="pag_inicio.html"
-                                    style="color: var(--bs-white); background-color: var(--bs-success);">Inicio</a>
-                            </li>
-                            <li class="nav-item item"><a class="nav-link" href="micuenta.html"
-                                    style="color: var(--bs-white); background-color: var(--bs-success)">mi
-                                    cuenta</a></li>
-                            <li class="nav-item item"><a class="nav-link" href="catalogo.html"
-                                    style="color: var(--bs-white); background-color: var(--bs-success)">lista de
-                                    productos</a></li>
-                            <li class="nav-item item"><a class="nav-link" href="carrito.html"
-                                    style="color: var(--bs-white); background-color: var(--bs-success)">mi
-                                    carrito</a></li>
-                            <li class="nav-item item"><a class="nav-link" href="Pedidos.html"
-                                    style="color: var(--bs-white); background-color: var(--bs-success)">mis
-                                    pedidos</a></li>
-                            <li class="nav-item item"><a class="nav-link" href="login.html"
-                                    style="color: var(--bs-white); background-color: var(--bs-success);">cerrar
-                                    sesion</a></li>
-                        </ul>
-                        <br>
-                    </div>
-                </div>
-            </nav><!-- End: Header Dark -->
-            <div class="collapse navbar-collapse" id="navcol-3">
-                <ul class="navbar-nav ms-auto"></ul>
-            </div>
-            </div>
-        </nav>
-        </div>
-    </nav>
-    <br>
-    <br>
-    <br>
+    {% include 'navbar.html' %}
     <main class="page catalog-page">
         <section class="clean-block clean-catalog dark">
             <div class="container">
@@ -138,6 +88,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <button class="formulariobtn" type="submit" style="background-color: #9b673c;">Eliminar Producto</button>
                             <div class="d-md-none"><a class="btn btn-link d-md-none filter-collapse"
                                     data-bs-toggle="collapse" aria-expanded="true" aria-controls="filters"
                                     href="#filters" role="button" style="color: #9b673c;">Filtros<i
@@ -195,17 +146,19 @@
                                                         <h6>Tipo de ambiente:<p class="tipoPlanta">{{ p.tipoAmbiente }}
                                                             </p>
                                                         </h6>
+                                                        <h6>Codigo de producto:<p class="tipoProducto">{{ p.id }}
+                                                        </p>
 
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="d-xl-flex align-items-xl-start about">
                                                 <div class="d-inline flex-row rating">
-                                                    <img src="img/star.svg">
-                                                    <img src="img/star.svg">
-                                                    <img src="img/star.svg">
-                                                    <img src="img/star-half-empty.svg">
-                                                    <img src="img/star-half-empty.svg">
+                                                    <img src="{% static 'img/star.svg' %}">
+                                                    <img src="{% static 'img/star.svg' %}">
+                                                    <img src="{% static 'img/star.svg' %}">
+                                                    <img src="{% static 'img/star-half-empty.svg' %}">
+                                                    <img src="{% static 'img/star-half-empty.svg' %}">
                                                     <h4 style="color: rgb(50,48,60);font-weight: bold;width: 100px;">
                                                         {{p.precio}}</h4><button
                                                         class="btn btn-primary text-center d-flex d-xxl-flex align-items-center align-items-xxl-center"
@@ -249,42 +202,9 @@
             </div>
         </section>
     </main><!-- Start: Footer Dark -->
-    <footer class="page-footer dark">
-        <!-- Start: Footer Dark -->
-        <footer class="footer-dark">
-            <div class="container">
-                <div class="row">
-                    <!-- Start: Services -->
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Servicios</h3>
-                        <ul>
-                            <li><a href="#">Venta Web</a></li>
-                            <li><a href="#">Contactos</a></li>
-                            <li><a href="#">Comentarios</a></li>
-                        </ul>
-                    </div><!-- End: Services -->
-                    <!-- Start: About -->
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Nosotros</h3>
-                        <ul>
-                            <li><a href="#">HappyCactus</a></li>
-                            <li><a href="#">Integrantes</a></li>
-                            <li><a href="#">Trayectoria</a></li>
-                        </ul>
-                    </div><!-- End: About -->
-                    <!-- Start: Footer Text -->
-                    <div class="col-md-6 item text">
-                        <h3>HappyCactus</h3>
-                        <p>Fundacion sin fines de lucro orientada a la venta de articulos de jardin y hogar.</p>
-                    </div><!-- End: Footer Text -->
-                </div><!-- Start: Copyright -->
-                <p class="copyright">HappyCactus © 2022</p><!-- End: Copyright -->
-            </div>
-        </footer><!-- End: Footer Dark -->
-
+    {% include 'footer.html' %}
 </body>
 
-<script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/script.min.js' %}"></script>
 <script src="{% static 'js/theme.js' %}"></script>
