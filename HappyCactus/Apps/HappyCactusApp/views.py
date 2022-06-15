@@ -64,7 +64,8 @@ def editarProducto(request):
         return redirect('/')
 
 def micuenta(request):
-    return render(request, 'micuenta.html')
+    current_user = request.user
+    return render(request, 'micuenta.html', {'current_user': current_user})
 
 def carrito(request):
     return render(request, 'carrito.html')
