@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Apps.HappyCactusApp.urls')),
     path('accounts/' , include('django.contrib.auth.urls')),
+    path('api/', include('Apps.rest_planta.urls')),
 
 ]

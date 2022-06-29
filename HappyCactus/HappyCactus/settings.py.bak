@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Apps.HappyCactusApp',
-    'Apps.rest_planta',
-    'rest_framework',
+    'Apps.HappyCactusApp'
 ]
 
 MIDDLEWARE = [
