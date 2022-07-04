@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme&amp;display=swap">
+    <link rel="stylesheet" href="css/formulario.css" />
+    <link rel="stylesheet" href="css/clima.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="icon" href="Img/cactus.ico" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body style="background-image: url(Img/cactusfondo.jpg)">
+    {% include 'navbar.html' %}
+    <main class="page registration-page">
+        <section class="clean-block clean-form" style="background-color: transparent;">
+            <form id="formulario">
+                <div class="block-heading">
+                    <h1 class="title registro">Registrarse</h1>
+                    <p>Llene los datos para crear una cuenta.</p>
+                </div>
+                <div class="form-control">
+                    <div class="mb-3 form-control" style="border: 0px;">
+                        <label class="form-label" for="nombreUsuario">Nombre </label>
+                        <input class="form-control item" type="text" id="nombreUsuario" autocomplete="off">
+                        <p></p>
+                    </div>
+
+                    <div class="mb-3 form-control" style="border: 0px;">
+                        <label class="form-label" for="apUsuario">Apellido </label>
+                        <input class="form-control item" type="text" id="apUsuario" autocomplete="off">
+                        <p></p>
+                    </div>
+
+                    <div class="mb-3 form-control" style="border: 0px;">
+                        <label class="form-label" for="usuario">Nombre de usuario</label>
+                        <input class="form-control item" type="text" id="usuario" autocomplete="off" name="username">
+                        <p></p>
+                    </div>
+
+                    <div class="mb-3 form-control" style="border: 0px;">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control item" type="email" id="email" autocomplete="off">
+                        <p></p>
+                    </div>
+
+                    <div class="mb-3 form-control" style="border: 0px;">
+                        <label class="form-label" for="pass">Crear contraseña</label>
+                        <input class="form-control item" type="password" id="pass" autocomplete="new-password" name="password1">
+                        <p></p>
+                    </div>
+
+                    <div class="mb-3 form-control" style="border: 0px;">
+                        <label class="form-label" for="passConfirma">Confirme contraseña</label>
+                        <input class="form-control item" type="password" id="passConfirma" autocomplete="new-password" name="password2">
+                        <p></p>
+                    </div>
+                    <button class="formulariobtn" type="submit">Crear cuenta</button>
+                </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    {% include 'footer.html' %}
+    
+</body>
+"{% static 'js/script.min.js' %}"
+    <script src="{% static 'js/Registro.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
+    <script src="{% static 'js/vanilla-zoom.js' %}"></script>
+
+</html>

@@ -1,8 +1,11 @@
+from pyexpat.errors import messages
 from django.shortcuts import redirect, render
 from .models import Producto
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-
+from .forms import CustomUserCreationForm
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as auth_login
 # import django get_template and render 
 from django.template import loader
 
@@ -71,7 +74,19 @@ def carrito(request):
     return render(request, 'carrito.html')
 
 def registration(request):
-    return render(request, 'registration.html')
+    data = {
+        'form': CustomUserCreationForm()
+    }
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            auth_login(request, user)
+            return redirect(to='/')
+    return render(request, 'registration/registration.html', data)
 
 def pag_inicio(request):
     return render(request, 'pag_inicio.html')
