@@ -7,10 +7,12 @@ from rest_framework.decorators import api_view
 from rest_framework.parsers import JSONParser
 from Apps.HappyCactusApp.models import Producto
 from .serializers import ProductoSerializer
+from django.contrib.auth.decorators import permission_required
 # Create your views here.
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
+@permission_required('Apps.HappyCactusApp.can_add_producto', raise_exception=True)
 def lista_productos(request):
     """
     Lista los productos
@@ -27,5 +29,8 @@ def lista_productos(request):
             return Response(serializer.data, status=201)
         else:
             return Response(serializer.errors, status=400)
+
+    
+        
 
 

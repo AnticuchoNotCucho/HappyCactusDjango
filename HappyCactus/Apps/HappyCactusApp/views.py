@@ -6,14 +6,16 @@ from django.http import HttpResponse
 from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
+from django.contrib.auth.decorators import permission_required
 # import django get_template and render 
 from django.template import loader
 
 # Create your views here.
+@permission_required('Apps.HappyCactusApp.can_add_producto')
 def index(request):
     productos = Producto.objects.all()
     return render(request, 'index.html', {'productos': productos})
-
+@permission_required('Apps.HappyCactusApp.can_add_producto')
 def registro(request):
     return render(request, 'registroproducto.html')
 
@@ -21,9 +23,7 @@ def catalogo(request):
     productos = Producto.objects.all()
     return render(request, 'catalogo.html', {'productos': productos})
 
-def login(request):
-    return render(request, 'login.html')
-
+@permission_required('Apps.HappyCactusApp.can_add_producto')
 def registrarProducto(request):
     if request.method == 'POST':
         nombre = request.POST['nombre']
@@ -35,16 +35,18 @@ def registrarProducto(request):
         stock = request.POST['stock']
         producto = Producto.objects.create(nombre=nombre, precio=precio, stock=stock,tipoAmbiente=tipoAmbiente, tipoPlanta=tipoPlanta, fecha=fecha, temperatura=temperatura)
         return redirect('/')
-
+    
+@permission_required('Apps.HappyCactusApp.can_add_producto')
 def eliminarProducto(request, id):
     producto = Producto.objects.get(id=id)
     producto.delete()
     return redirect('/')
 
+@permission_required('Apps.HappyCactusApp.can_add_producto')
 def edicionProducto(request, id):
     producto = Producto.objects.get(id=id)
     return render(request, 'edicionProducto.html', {'producto': producto})
-
+@permission_required('Apps.HappyCactusApp.can_add_producto')
 def editarProducto(request):
     if request.method == 'POST':
         id = request.POST['id']
@@ -90,3 +92,12 @@ def registration(request):
 
 def pag_inicio(request):
     return render(request, 'pag_inicio.html')
+
+def pag_eucaliptus(request):
+    return render(request, 'paginaEucaliptus.html')
+
+def pag_enredadera(request):
+    return render(request, 'paginaEnredadera.html')
+
+def pag_ficus(request):
+    return render(request, 'paginaFicus.html')

@@ -11,6 +11,7 @@ class Producto(models.Model):
     stock = models.IntegerField()
     fecha = models.DateField(auto_now_add=True, blank=True, auto_now=False)
     temperatura = models.IntegerField()
+    link = models.CharField(max_length=100, default='SOME STRING')
 
     def __str__(self):
         return self.nombre

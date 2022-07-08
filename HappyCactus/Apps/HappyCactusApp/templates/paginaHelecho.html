@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cactus de agua</title>
+    <link rel="stylesheet" href="css/clima.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="icon" href= "Img/cactus.ico" />
+    
+</head>
+<body>
+    {% include 'navbar.html' %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div id="div01" class="container">
+        <div class="row">
+            <div class="col-6" style="display: flex;">
+                <img src="Img/catalogo/helecho.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-6" style="margin-left: inherit;">
+                <div id="row01" class="row">
+                    <h2 style="text-align: left;font-size: 20.64px;">helecho</h2>
+                </div>
+                <div id="row01" class="row">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Caracteristicas:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo de producto:</td>
+                                    <td>Planta</td>
+                                </tr>
+                                <tr>
+                                    <td>Descripcion del producto</td>
+                                    <td> Los helechos son plantas que no necesitan del sol directo, aptas para interiores y nesecitan regarse con recuencia.</td>
+                                </tr>
+                                <tr>
+                                    <td>Temperatura ambiente ideal en °C:</td>
+                                    <td id="temp_planta">20</td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo de ambiente:</td>
+                                    <td>Mixto</td>
+                                </tr>
+                                <tr>
+                                    <td>Precio:</td>
+                                    <td>$5990</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-responsive" id="clima">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Clima actual: </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="icon">si o no</td>
+                                </tr>
+                                <tr>
+                                    <td>Comuna: </td>
+                                    <td id="templanta">si o no</td>
+                                
+                                </tr>
+                                <tr>
+                                    <td>Tiempo actual: </td>
+                                    <td id="descripcion">Planta</td>
+                                </tr>
+                                <tr>
+                                    <td>Temperatura:</td>
+                                    <td id="temp">20°C</td>
+                                </tr>
+                                <tr>
+                                    <td>Humedad:</td>
+                                    <td id="humedad"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mensaje:</td>
+                                    <td id="mensj" style="color: rgb(25,135,84);">Cell 4</td>
+                                </tr>
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="page-footer dark">
+        <!-- Start: Footer Dark -->
+        <footer class="footer-dark">
+            <div class="container">
+                <div class="row">
+                    <!-- Start: Services -->
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="#">Venta Web</a></li>
+                            <li><a href="#">Contactos</a></li>
+                            <li><a href="#">Comentarios</a></li>
+                        </ul>
+                    </div><!-- End: Services -->
+                    <!-- Start: About -->
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Nosotros</h3>
+                        <ul>
+                            <li><a href="#">HappyCactus</a></li>
+                            <li><a href="#">Integrantes</a></li>
+                            <li><a href="#">Trayectoria</a></li>
+                        </ul>
+                    </div><!-- End: About -->
+                    <!-- Start: Footer Text -->
+                    <div class="col-md-6 item text">
+                        <h3>HappyCactus</h3>
+                        <p>Fundacion sin fines de lucro orientada a la venta de articulos de jardin y hogar.</p>
+                    </div><!-- End: Footer Text -->
+                </div><!-- Start: Copyright -->
+                <p class="copyright">HappyCactus © 2022</p><!-- End: Copyright -->
+            </div>
+    </footer><!-- End: Footer Dark -->
+    <script src="{% static 'js/cargarApi.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/script.min.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+<script src="{% static 'js/filtroProducto.js' %}"></script>
+</body>
+
+</html>

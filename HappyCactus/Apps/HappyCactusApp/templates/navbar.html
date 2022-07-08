@@ -25,7 +25,7 @@
                 <!-- Start: Header Dark -->
                 <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar"
                     style="height: 84px;">
-                    <div class="container"><a class="navbar-brand logo col-6 col-lg-4" href=""
+                    <div class="container"><a class="navbar-brand logo col-12 col-lg-3" href=""
                             style="font-weight: bold;padding: 0px 0px;margin-top: -8px;"><img
                                 src='{% static "img/cactus.png" %}' style="height:66px;">
                                 <strong>HappyCactus</strong></a><button
@@ -49,9 +49,17 @@
                                 <li class="nav-item item"><a class="nav-link" href=""
                                         style="color: var(--bs-white); background-color: var(--bs-success)">mis
                                         pedidos</a></li>
-                                <li class="nav-item item"><a class="nav-link" href=""
+                                <li class="nav-item item"><a class="nav-link" href="/api/lista_productos"
+                                        style="color: var(--bs-white); background-color: var(--bs-success)">Gestion API</a></li>
+                                {% if request.user.is_authenticated %}
+                                <li class="nav-item item"><a class="nav-link" href="/accounts/logout/"
                                         style="color: var(--bs-white); background-color: var(--bs-success);">cerrar
                                         sesion</a></li>
+                                {% else %}
+                                <li class="nav-item item"><a class="nav-link" href="/accounts/login/"
+                                        style="color: var(--bs-white); background-color: var(--bs-success);">iniciar
+                                        sesion</a></li>
+                                {% endif %}
                             </ul>
                             <br>
                         </div>

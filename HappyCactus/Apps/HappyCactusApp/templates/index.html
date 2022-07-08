@@ -9,6 +9,7 @@
 <body style="background-image: url( '/static/Img/cactusfondo.jpg');">
     {% include 'navbar.html' %}
     <br>
+    <table>
     <h1 style="background-color: white; width: 50rem; margin-left: 30px;">Lista de productos en el sistema</h1> 
     <div style="padding-left: 300px;">
         <button type="button" class="btn" onclick="location.href='registro'" style="background-color: var(--bs-success); color: rgb(255, 255, 255);">
@@ -34,5 +35,6 @@
         </li>
         {% endfor %}        
     </ul>
+  </table>
 </body>
 </html>
